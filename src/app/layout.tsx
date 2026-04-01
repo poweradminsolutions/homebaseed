@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WebsiteJsonLd, OrganizationJsonLd } from "@/components/seo/JsonLd";
+import { AuthProvider } from "@/components/auth/AuthProvider";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://thehomeschoolsource.com"),
@@ -78,17 +79,19 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <WebsiteJsonLd />
         <OrganizationJsonLd />
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg"
-        >
-          Skip to main content
-        </a>
-        <Header />
-        <main id="main-content" className="flex-1" role="main">
-          {children}
-        </main>
-        <Footer />
+        <AuthProvider>
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg"
+          >
+            Skip to main content
+          </a>
+          <Header />
+          <main id="main-content" className="flex-1" role="main">
+            {children}
+          </main>
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );

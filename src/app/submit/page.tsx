@@ -66,25 +66,48 @@ export default function SubmitPage() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Submission data:", formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setFormData({
-        type: "",
-        name: "",
-        description: "",
-        website: "",
-        email: "",
-        state: "",
-        city: "",
-        submitterName: "",
-        submitterEmail: "",
-        termsAgreed: false,
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      const response = await fetch("/api/submissions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
-      setSubmitted(false);
-    }, 5000);
+
+      if (response.ok) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setFormData({
+            type: "",
+            name: "",
+            description: "",
+            website: "",
+            email: "",
+            state: "",
+            city: "",
+            submitterName: "",
+            submitterEmail: "",
+            termsAgreed: false,
+          });
+          setSubmitted(false);
+        }, 5000);
+      } else {
+        const error = await response.json();
+        setSubmitError(error.error || "Failed to submit. Please try again.");
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      setSubmitError("An error occurred. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const renderConditionalFields = () => {
@@ -323,7 +346,7 @@ export default function SubmitPage() {
                       Thank You!
                     </h3>
                     <p className="text-green-800 mb-4">
-                      We got your submission and our editors will review it
+                      We received your submission and our editors will review it
                       within a few business days. You should hear back soon!
                     </p>
                     <p className="text-sm text-green-700">
@@ -332,6 +355,11 @@ export default function SubmitPage() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
+                    {submitError && (
+                      <div className="rounded-lg bg-red-50 border border-red-200 p-4">
+                        <p className="text-red-800">{submitError}</p>
+                      </div>
+                    )}
                     <div>
                       <label className="block text-sm font-semibold text-foreground mb-3">
                         What are you sharing?
@@ -527,10 +555,10 @@ export default function SubmitPage() {
 
                         <button
                           type="submit"
-                          disabled={!formData.termsAgreed}
+                          disabled={!formData.termsAgreed || isSubmitting}
                           className="w-full bg-primary text-white font-semibold py-3 rounded-lg hover:bg-primary-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                         >
-                          Submit for Review
+                          {isSubmitting ? "Submitting..." : "Submit for Review"}
                         </button>
                       </>
                     )}
