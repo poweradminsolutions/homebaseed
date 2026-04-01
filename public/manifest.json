@@ -1,0 +1,24 @@
+{
+  "name": "The Homeschool Source",
+  "short_name": "HomeschoolSource",
+  "description": "Free, comprehensive directory for the US homeschooling ecosystem. Find state laws, local co-ops, curriculum reviews, and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAFAF8",
+  "theme_color": "#1B6B4A",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["education", "reference"]
+}
