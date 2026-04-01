@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { states } from "@/data/states";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://homebaseed.com";
+  const baseUrl = "https://thehomeschoolsource.com";
 
   const staticPages: MetadataRoute.Sitemap = [
     {

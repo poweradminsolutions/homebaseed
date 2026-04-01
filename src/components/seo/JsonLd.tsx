@@ -2,15 +2,15 @@ export function WebsiteJsonLd() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "HomebaseED",
-    url: "https://homebaseed.com",
+    name: "The Homeschool Source",
+    url: "https://thehomeschoolsource.com",
     description:
       "Free, comprehensive directory for the US homeschooling ecosystem. Find state laws, local co-ops, curriculum reviews, and everything you need to homeschool with confidence.",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://homebaseed.com/find?q={search_term_string}",
+        urlTemplate: "https://thehomeschoolsource.com/find?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },
@@ -28,9 +28,9 @@ export function OrganizationJsonLd() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "HomebaseED",
-    url: "https://homebaseed.com",
-    logo: "https://homebaseed.com/logo-512.png",
+    name: "The Homeschool Source",
+    url: "https://thehomeschoolsource.com",
+    logo: "https://thehomeschoolsource.com/logo-512.png",
     description:
       "A free, neutral directory for the US homeschooling community.",
     sameAs: [],
@@ -82,18 +82,18 @@ export function StateGuideJsonLd({
     "@type": "Article",
     headline: `${stateName} Homeschool Laws & Requirements`,
     description,
-    url: `https://homebaseed.com/states/${slug}`,
+    url: `https://thehomeschoolsource.com/states/${slug}`,
     publisher: {
       "@type": "Organization",
-      name: "HomebaseED",
+      name: "The Homeschool Source",
       logo: {
         "@type": "ImageObject",
-        url: "https://homebaseed.com/logo-512.png",
+        url: "https://thehomeschoolsource.com/logo-512.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://homebaseed.com/states/${slug}`,
+      "@id": `https://thehomeschoolsource.com/states/${slug}`,
     },
   };
 

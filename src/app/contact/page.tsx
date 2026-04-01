@@ -41,9 +41,9 @@ export default function ContactPage() {
 
   const faqs = [
     {
-      question: "Is HomebaseED really free?",
+      question: "Is The Homeschool Source really free?",
       answer:
-        "Yes, completely. Every resource on HomebaseED is free to access. No paywalls, no ads, no affiliate links, no surprise charges. We're funded by community contributions and the belief that homeschooling information should be accessible to everyone.",
+        "Yes, completely. Every resource on The Homeschool Source is free to access. No paywalls, no ads, no affiliate links, no surprise charges. We're funded by community contributions and the belief that homeschooling information should be accessible to everyone.",
     },
     {
       question: "How do I add my co-op or resource?",
@@ -63,7 +63,7 @@ export default function ContactPage() {
     {
       question: "Can I volunteer or contribute?",
       answer:
-        "Absolutely! We're looking for editors, writers, researchers, developers, and subject matter experts. Email us at hello@homebaseed.com or use the 'Partnership Inquiry' option to tell us how you'd like to help.",
+        "Absolutely! We're looking for editors, writers, researchers, developers, and subject matter experts. Email us at hello@thehomeschoolsource.com or use the 'Partnership Inquiry' option to tell us how you'd like to help.",
     },
     {
       question: "How do I report incorrect information?",
@@ -214,7 +214,7 @@ export default function ContactPage() {
                   <div>
                     <p className="text-sm text-muted mb-1">Email</p>
                     <p className="text-primary font-medium">
-                      hello@homebaseed.com
+                      hello@thehomeschoolsource.com
                     </p>
                   </div>
                   <div>
@@ -252,7 +252,7 @@ export default function ContactPage() {
               Frequently Asked Questions
             </h2>
             <p className="text-muted max-w-2xl mx-auto">
-              Answers to common questions about HomebaseED
+              Answers to common questions about The Homeschool Source
             </p>
           </div>
 

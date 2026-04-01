@@ -289,7 +289,7 @@ export default function SubmitPage() {
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted leading-relaxed max-w-2xl mx-auto">
               Found an amazing co-op, curriculum, tutoring service, or event?
-              Help other families discover it. Add it to HomebaseED.
+              Help other families discover it. Add it to The Homeschool Source.
             </p>
           </div>
         </div>
@@ -327,7 +327,7 @@ export default function SubmitPage() {
                       within a few business days. You should hear back soon!
                     </p>
                     <p className="text-sm text-green-700">
-                      We really appreciate you helping make HomebaseED better.
+                      We really appreciate you helping make The Homeschool Source better.
                     </p>
                   </div>
                 ) : (
@@ -518,7 +518,7 @@ export default function SubmitPage() {
                             />
                             <span className="text-sm text-muted leading-relaxed">
                               I confirm that this information is accurate and
-                              complete. I understand that HomebaseED may edit
+                              complete. I understand that The Homeschool Source may edit
                               or remove this listing if it violates our
                               guidelines or contains inaccurate information.
                             </span>
@@ -635,7 +635,7 @@ export default function SubmitPage() {
                   Questions?
                 </h3>
                 <p className="text-sm text-muted mb-4">
-                  Email us at hello@homebaseed.com or use our contact form.
+                  Email us at hello@thehomeschoolsource.com or use our contact form.
                 </p>
                 <a
                   href="/contact"

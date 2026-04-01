@@ -28,7 +28,7 @@ export function Footer() {
           {/* Brand */}
           <div>
             <Link href="/" className="text-xl font-bold">
-              Homebase<span className="text-green-400">ED</span>
+              The Homeschool <span className="text-green-400">Source</span>
             </Link>
             <p className="mt-3 text-sm text-gray-400 leading-relaxed">
               A free, neutral directory for the US homeschooling community.
@@ -96,7 +96,7 @@ export function Footer() {
 
         <div className="mt-10 pt-6 border-t border-gray-700 text-center">
           <p className="text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} HomebaseED. Free and open for
+            &copy; {new Date().getFullYear()} The Homeschool Source. Free and open for
             everyone. Not affiliated with any religious organization, curriculum
             publisher, or government agency.
           </p>

@@ -2,15 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About HomebaseED",
+  title: "About The Homeschool Source",
   description:
-    "Learn about HomebaseED: the free, neutral, community-built homeschooling directory. No ads, no affiliate links, no bias. Built by homeschool parents, for homeschool parents.",
+    "Learn about The Homeschool Source: the free, neutral, community-built homeschooling directory. No ads, no affiliate links, no bias. Built by homeschool parents, for homeschool parents.",
   openGraph: {
-    title: "About HomebaseED",
+    title: "About The Homeschool Source",
     description:
       "Free, neutral, community-built homeschooling directory. Learn our mission.",
     type: "website",
-    url: "https://homebaseed.com/about",
+    url: "https://thehomeschoolsource.com/about",
   },
 };
 
@@ -22,7 +22,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
           <div className="text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-foreground tracking-tight">
-              About HomebaseED
+              About The Homeschool Source
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted leading-relaxed max-w-2xl mx-auto">
               We built this because homeschooling parents deserve better than
@@ -56,7 +56,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-muted leading-relaxed">
                 <p>
-                  Before HomebaseED, here&apos;s what homeschool parents faced:
+                  Before The Homeschool Source, here&apos;s what homeschool parents faced:
                 </p>
                 <ul className="space-y-3 ml-4">
                   <li className="flex gap-3">
@@ -162,7 +162,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 text-muted leading-relaxed">
                 <p>
-                  HomebaseED is built on community trust and volunteer
+                  The Homeschool Source is built on community trust and volunteer
                   verification:
                 </p>
                 <div className="grid gap-6 md:grid-cols-3">
@@ -235,7 +235,7 @@ export default function AboutPage() {
                 Who We Are
               </h2>
               <p className="text-muted leading-relaxed mb-6">
-                HomebaseED was founded by homeschooling parents who got tired of
+                The Homeschool Source was founded by homeschooling parents who got tired of
                 having the same conversation over and over: "Where do I find
                 X?" "Is that curriculum any good?" "What does my state actually
                 require?"

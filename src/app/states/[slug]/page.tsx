@@ -14,13 +14,13 @@ export async function generateMetadata({
 
   if (!lawData) {
     return {
-      title: "State Not Found | HomebaseED",
+      title: "State Not Found | The Homeschool Source",
       description: "The state you're looking for doesn't exist.",
     };
   }
 
   const stateState = getStateBySlug(slug);
-  const title = `${lawData.name} Homeschool Laws & Requirements | HomebaseED`;
+  const title = `${lawData.name} Homeschool Laws & Requirements | The Homeschool Source`;
   const description = lawData.quickSummary;
 
   return {
@@ -36,10 +36,10 @@ export async function generateMetadata({
       title,
       description,
       type: "article",
-      url: `https://homebaseed.com/states/${slug}`,
+      url: `https://thehomeschoolsource.com/states/${slug}`,
       images: [
         {
-          url: "https://homebaseed.com/og-image.png",
+          url: "https://thehomeschoolsource.com/og-image.png",
           width: 1200,
           height: 630,
           alt: `${lawData.name} homeschool laws`,
@@ -47,7 +47,7 @@ export async function generateMetadata({
       ],
     },
     alternates: {
-      canonical: `https://homebaseed.com/states/${slug}`,
+      canonical: `https://thehomeschoolsource.com/states/${slug}`,
     },
   };
 }
@@ -82,9 +82,9 @@ export default async function StatePage({
   }
 
   const breadcrumbItems = [
-    { name: "Home", url: "https://homebaseed.com" },
-    { name: "State Laws", url: "https://homebaseed.com/states" },
-    { name: lawData.name, url: `https://homebaseed.com/states/${slug}` },
+    { name: "Home", url: "https://thehomeschoolsource.com" },
+    { name: "State Laws", url: "https://thehomeschoolsource.com/states" },
+    { name: lawData.name, url: `https://thehomeschoolsource.com/states/${slug}` },
   ];
 
   return (

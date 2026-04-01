@@ -5,7 +5,7 @@ import { stateLaws } from "@/data/stateLaws";
 import { BreadcrumbJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Homeschool Laws by State | HomebaseED",
+  title: "Homeschool Laws by State | The Homeschool Source",
   description:
     "Comprehensive guide to homeschooling laws and regulations for all 50 states. Find requirements, notification rules, and educational standards for your state.",
   keywords: [
@@ -15,14 +15,14 @@ export const metadata: Metadata = {
     "homeschool by state",
   ],
   openGraph: {
-    title: "Homeschool Laws by State | HomebaseED",
+    title: "Homeschool Laws by State | The Homeschool Source",
     description:
       "Comprehensive guide to homeschooling laws and regulations for all 50 states.",
     type: "website",
-    url: "https://homebaseed.com/states",
+    url: "https://thehomeschoolsource.com/states",
     images: [
       {
-        url: "https://homebaseed.com/og-image.png",
+        url: "https://thehomeschoolsource.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "Homeschool laws by state",
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://homebaseed.com/states",
+    canonical: "https://thehomeschoolsource.com/states",
   },
 };
 
 export default function StatesPage() {
   const breadcrumbItems = [
-    { name: "Home", url: "https://homebaseed.com" },
-    { name: "State Laws", url: "https://homebaseed.com/states" },
+    { name: "Home", url: "https://thehomeschoolsource.com" },
+    { name: "State Laws", url: "https://thehomeschoolsource.com/states" },
   ];
 
   return (

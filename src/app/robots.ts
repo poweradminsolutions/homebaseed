@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/", "/_next/"],
       },
     ],
-    sitemap: "https://homebaseed.com/sitemap.xml",
+    sitemap: "https://thehomeschoolsource.com/sitemap.xml",
   };
 }

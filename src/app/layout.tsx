@@ -5,10 +5,10 @@ import { Footer } from "@/components/layout/Footer";
 import { WebsiteJsonLd, OrganizationJsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://homebaseed.com"),
+  metadataBase: new URL("https://thehomeschoolsource.com"),
   title: {
-    default: "HomebaseED - Your Homeschool Command Center",
-    template: "%s | HomebaseED",
+    default: "The Homeschool Source - Your Complete Homeschool Directory",
+    template: "%s | The Homeschool Source",
   },
   description:
     "Free, comprehensive directory for the US homeschooling ecosystem. Find state laws, local co-ops, curriculum reviews, and everything you need to homeschool with confidence.",
@@ -29,31 +29,31 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "HomebaseED - Your Homeschool Command Center",
+    title: "The Homeschool Source - Your Complete Homeschool Directory",
     description:
       "Free, comprehensive directory for the US homeschooling ecosystem. State laws, curriculum reviews, local co-ops, and more.",
     type: "website",
     locale: "en_US",
-    url: "https://homebaseed.com",
-    siteName: "HomebaseED",
+    url: "https://thehomeschoolsource.com",
+    siteName: "The Homeschool Source",
     images: [
       {
         url: "/logo-512.png",
         width: 512,
         height: 512,
-        alt: "HomebaseED Logo",
+        alt: "The Homeschool Source Logo",
       },
     ],
   },
   twitter: {
     card: "summary",
-    title: "HomebaseED - Your Homeschool Command Center",
+    title: "The Homeschool Source - Your Complete Homeschool Directory",
     description:
       "Free, comprehensive directory for the US homeschooling ecosystem.",
     images: ["/logo-512.png"],
   },
   alternates: {
-    canonical: "https://homebaseed.com",
+    canonical: "https://thehomeschoolsource.com",
   },
   robots: {
     index: true,

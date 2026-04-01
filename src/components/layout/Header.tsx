@@ -23,14 +23,14 @@ export function Header() {
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/logo.svg"
-              alt="HomebaseED"
+              alt="The Homeschool Source"
               width={32}
               height={32}
               className="w-8 h-8"
               priority
             />
             <span className="text-xl font-bold text-foreground">
-              Homebase<span className="text-primary">ED</span>
+              The Homeschool <span className="text-primary">Source</span>
             </span>
           </Link>
 
