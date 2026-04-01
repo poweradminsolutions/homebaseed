@@ -210,6 +210,91 @@ export default function CurriculumPage() {
           </div>
         </div>
 
+        {/* Mobile Filters Toggle - Stacked above results on small screens */}
+        <div className="lg:hidden mb-6">
+          <button
+            onClick={() => setMobileFiltersOpen(!mobileFiltersOpen)}
+            className="flex items-center justify-between px-4 py-3 bg-white border border-border rounded-lg text-foreground hover:bg-primary-light transition-colors w-full"
+          >
+            <span className="font-semibold">Filters</span>
+            <ChevronDown
+              className={`w-5 h-5 transform transition-transform ${
+                mobileFiltersOpen ? "rotate-180" : ""
+              }`}
+            />
+          </button>
+
+          {mobileFiltersOpen && (
+            <div className="mt-4 space-y-4 p-4 bg-white border border-border rounded-lg">
+              {hasActiveFilters && (
+                <button
+                  onClick={clearAllFilters}
+                  className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-primary-light border border-border rounded-lg text-primary hover:bg-primary hover:text-white transition-colors"
+                >
+                  <X className="w-4 h-4" />
+                  Clear All Filters
+                </button>
+              )}
+              <FilterSection
+                title="Subject"
+                options={allSubjects}
+                selectedOptions={selectedSubjects}
+                onToggle={(value) =>
+                  toggleFilter(value, selectedSubjects, setSelectedSubjects)
+                }
+              />
+              <FilterSection
+                title="Grade Level"
+                options={["K", "1-3", "4-6", "7-8", "9-10", "11-12"]}
+                selectedOptions={selectedGrades}
+                onToggle={(value) =>
+                  toggleFilter(value, selectedGrades, setSelectedGrades)
+                }
+              />
+              <FilterSection
+                title="Teaching Approach"
+                options={allApproaches}
+                selectedOptions={selectedApproaches}
+                onToggle={(value) =>
+                  toggleFilter(
+                    value,
+                    selectedApproaches,
+                    setSelectedApproaches
+                  )
+                }
+              />
+              <FilterSection
+                title="Format"
+                options={allFormats}
+                selectedOptions={selectedFormats}
+                onToggle={(value) =>
+                  toggleFilter(value, selectedFormats, setSelectedFormats)
+                }
+              />
+              <FilterSection
+                title="Price Range"
+                options={allPrices}
+                selectedOptions={selectedPrices}
+                onToggle={(value) =>
+                  toggleFilter(value, selectedPrices, setSelectedPrices)
+                }
+              />
+              <FilterSection
+                title="Religious Affiliation"
+                options={allAffiliations}
+                selectedOptions={selectedAffiliations}
+                onToggle={(value) =>
+                  toggleFilter(
+                    value,
+                    selectedAffiliations,
+                    setSelectedAffiliations
+                  )
+                }
+              />
+            </div>
+          )}
+        </div>
+
         <div className="flex gap-8">
           {/* Sidebar - Hidden on mobile, visible on desktop */}
           <div className="hidden lg:block w-80 flex-shrink-0">
@@ -293,91 +378,6 @@ export default function CurriculumPage() {
                 }
               />
             </div>
-          </div>
-
-          {/* Mobile Filters Toggle */}
-          <div className="lg:hidden mb-6">
-            <button
-              onClick={() => setMobileFiltersOpen(!mobileFiltersOpen)}
-              className="w-full flex items-center justify-between px-4 py-2 bg-white border border-border rounded-lg text-foreground hover:bg-primary-light transition-colors"
-            >
-              <span className="font-semibold">Filters</span>
-              <ChevronDown
-                className={`w-5 h-5 transform transition-transform ${
-                  mobileFiltersOpen ? "rotate-180" : ""
-                }`}
-              />
-            </button>
-
-            {mobileFiltersOpen && (
-              <div className="mt-4 space-y-4 p-4 bg-white border border-border rounded-lg">
-                {hasActiveFilters && (
-                  <button
-                    onClick={clearAllFilters}
-                    className="w-full flex items-center justify-center gap-2 px-4 py-2 bg-primary-light border border-border rounded-lg text-primary hover:bg-primary hover:text-white transition-colors"
-                  >
-                    <X className="w-4 h-4" />
-                    Clear All Filters
-                  </button>
-                )}
-                <FilterSection
-                  title="Subject"
-                  options={allSubjects}
-                  selectedOptions={selectedSubjects}
-                  onToggle={(value) =>
-                    toggleFilter(value, selectedSubjects, setSelectedSubjects)
-                  }
-                />
-                <FilterSection
-                  title="Grade Level"
-                  options={["K", "1-3", "4-6", "7-8", "9-10", "11-12"]}
-                  selectedOptions={selectedGrades}
-                  onToggle={(value) =>
-                    toggleFilter(value, selectedGrades, setSelectedGrades)
-                  }
-                />
-                <FilterSection
-                  title="Teaching Approach"
-                  options={allApproaches}
-                  selectedOptions={selectedApproaches}
-                  onToggle={(value) =>
-                    toggleFilter(
-                      value,
-                      selectedApproaches,
-                      setSelectedApproaches
-                    )
-                  }
-                />
-                <FilterSection
-                  title="Format"
-                  options={allFormats}
-                  selectedOptions={selectedFormats}
-                  onToggle={(value) =>
-                    toggleFilter(value, selectedFormats, setSelectedFormats)
-                  }
-                />
-                <FilterSection
-                  title="Price Range"
-                  options={allPrices}
-                  selectedOptions={selectedPrices}
-                  onToggle={(value) =>
-                    toggleFilter(value, selectedPrices, setSelectedPrices)
-                  }
-                />
-                <FilterSection
-                  title="Religious Affiliation"
-                  options={allAffiliations}
-                  selectedOptions={selectedAffiliations}
-                  onToggle={(value) =>
-                    toggleFilter(
-                      value,
-                      selectedAffiliations,
-                      setSelectedAffiliations
-                    )
-                  }
-                />
-              </div>
-            )}
           </div>
 
           {/* Main Content */}
