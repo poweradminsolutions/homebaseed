@@ -1,0 +1,6 @@
+name,website,phone,address,type,review_rating,collection_query,collection_category,collection_city,collection_timestamp
+Austin Homeschool Co-op,https://example.com/austin-coop,512-555-1234,"Austin, TX 78701",Homeschool Co-op,4.8,homeschool co-op austin,co_ops_groups,Austin,2024-01-01T00:00:00
+Advanced Math Tutoring,https://example.com/tutoring,512-555-5678,"Austin, TX 78702",Tutoring Service,4.9,homeschool tutor austin,tutoring_academic,Austin,2024-01-01T00:00:00
+Music Lessons Studio,https://example.com/music,512-555-9999,"Austin, TX 78703",Music Lessons,4.7,homeschool music lessons austin,enrichment_classes,Austin,2024-01-01T00:00:00
+Austin Soccer Academy,https://example.com/soccer,512-555-7777,"Austin, TX 78704",Sports Academy,4.6,homeschool sports league austin,sports_extracurricular,Austin,2024-01-01T00:00:00
+Plumbing Services Inc,https://example.com/plumbing,512-555-0000,"Austin, TX 78705",Plumbing Service,4.5,random query,other,Austin,2024-01-01T00:00:00
