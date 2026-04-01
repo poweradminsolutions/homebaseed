@@ -17,6 +17,8 @@ const footerLinks = {
     { href: "/about", label: "About Us" },
     { href: "/contact", label: "Contact" },
     { href: "/submit", label: "Submit a Listing" },
+    { href: "/privacy", label: "Privacy Policy" },
+    { href: "/terms", label: "Terms of Service" },
   ],
 };
 

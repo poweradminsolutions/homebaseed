@@ -1,20 +1,20 @@
 "use client";
 
-import type { Metadata } from "next";
 import { useState } from "react";
-
-// Note: Metadata export doesn't work in client components, so we'll keep it server-side
-// This component should be wrapped in a server-side layout with metadata
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
+    mobile: "",
     subject: "",
     message: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -26,17 +26,49 @@ export default function ContactPage() {
       ...prev,
       [name]: value,
     }));
+    setError(null);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real application, this would send to a backend
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      setSubmitted(false);
-    }, 3000);
+    setLoading(true);
+    setError(null);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        setError(data.error || "Failed to send message");
+        setLoading(false);
+        return;
+      }
+
+      setSubmitted(true);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        mobile: "",
+        subject: "",
+        message: "",
+      });
+      setLoading(false);
+
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 5000);
+    } catch (err) {
+      setError("An error occurred. Please try again.");
+      setLoading(false);
+    }
   };
 
   const faqs = [
@@ -63,7 +95,7 @@ export default function ContactPage() {
     {
       question: "Can I volunteer or contribute?",
       answer:
-        "Absolutely! We're looking for editors, writers, researchers, developers, and subject matter experts. Email us at hello@thehomeschoolsource.com or use the 'Partnership Inquiry' option to tell us how you'd like to help.",
+        "Absolutely! We're looking for editors, writers, researchers, developers, and subject matter experts. Use the 'Partnership Inquiry' option in the contact form to tell us how you'd like to help.",
     },
     {
       question: "How do I report incorrect information?",
@@ -126,31 +158,37 @@ export default function ContactPage() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
+                    {error && (
+                      <div className="rounded-lg bg-red-50 border border-red-200 p-4">
+                        <p className="text-sm text-red-800">{error}</p>
+                      </div>
+                    )}
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-2">
-                          Your Name
+                          First Name <span className="text-red-500">*</span>
                         </label>
                         <input
                           type="text"
-                          name="name"
-                          value={formData.name}
+                          name="firstName"
+                          value={formData.firstName}
                           onChange={handleChange}
-                          placeholder="Sarah Johnson"
+                          placeholder="Sarah"
                           required
                           className="w-full px-4 py-2.5 border border-border rounded-lg text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                         />
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-foreground mb-2">
-                          Email Address
+                          Last Name <span className="text-red-500">*</span>
                         </label>
                         <input
-                          type="email"
-                          name="email"
-                          value={formData.email}
+                          type="text"
+                          name="lastName"
+                          value={formData.lastName}
                           onChange={handleChange}
-                          placeholder="you@example.com"
+                          placeholder="Johnson"
                           required
                           className="w-full px-4 py-2.5 border border-border rounded-lg text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                         />
@@ -159,7 +197,37 @@ export default function ContactPage() {
 
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">
-                        Subject
+                        Email Address <span className="text-red-500">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        placeholder="you@example.com"
+                        required
+                        className="w-full px-4 py-2.5 border border-border rounded-lg text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        Mobile Phone
+                        <span className="text-muted text-xs font-normal ml-2">Optional - for faster response</span>
+                      </label>
+                      <input
+                        type="tel"
+                        name="mobile"
+                        value={formData.mobile}
+                        onChange={handleChange}
+                        placeholder="(555) 123-4567"
+                        className="w-full px-4 py-2.5 border border-border rounded-lg text-foreground placeholder-muted focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-foreground mb-2">
+                        Subject <span className="text-red-500">*</span>
                       </label>
                       <select
                         name="subject"
@@ -169,18 +237,18 @@ export default function ContactPage() {
                         className="w-full px-4 py-2.5 border border-border rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                       >
                         <option value="">Choose a topic...</option>
-                        <option value="general">General Question</option>
-                        <option value="incorrect">Report Incorrect Info</option>
-                        <option value="submit">Submit a Resource</option>
-                        <option value="partnership">Partnership Inquiry</option>
-                        <option value="bug">Bug Report</option>
-                        <option value="other">Other</option>
+                        <option value="General Question">General Question</option>
+                        <option value="Report Incorrect Info">Report Incorrect Info</option>
+                        <option value="Submit a Resource">Submit a Resource</option>
+                        <option value="Partnership Inquiry">Partnership Inquiry</option>
+                        <option value="Bug Report">Bug Report</option>
+                        <option value="Other">Other</option>
                       </select>
                     </div>
 
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-2">
-                        Message
+                        Message <span className="text-red-500">*</span>
                       </label>
                       <textarea
                         name="message"
@@ -195,9 +263,10 @@ export default function ContactPage() {
 
                     <button
                       type="submit"
-                      className="w-full bg-primary text-white font-semibold py-3 rounded-lg hover:bg-primary-dark transition-colors"
+                      disabled={loading}
+                      className="w-full bg-primary text-white font-semibold py-3 rounded-lg hover:bg-primary-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      Send Message
+                      {loading ? "Sending..." : "Send Message"}
                     </button>
                   </form>
                 )}
@@ -208,19 +277,12 @@ export default function ContactPage() {
             <div className="space-y-6">
               <div className="bg-primary-light rounded-xl p-6 border border-primary/20">
                 <h3 className="text-lg font-semibold text-foreground mb-4">
-                  Quick Contact Info
+                  Response Time
                 </h3>
                 <div className="space-y-4">
-                  <div>
-                    <p className="text-sm text-muted mb-1">Email</p>
-                    <p className="text-primary font-medium">
-                      hello@thehomeschoolsource.com
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted mb-1">Response Time</p>
-                    <p className="text-foreground font-medium">24-48 hours</p>
-                  </div>
+                  <p className="text-sm text-muted leading-relaxed">
+                    We typically respond to all messages within <strong>24-48 hours</strong> during business days. For faster service on urgent matters, please include your phone number.
+                  </p>
                 </div>
               </div>
 
