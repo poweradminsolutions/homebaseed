@@ -3,15 +3,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { UserMenu } from "@/components/auth/UserMenu";
 
 const navLinks = [
   { href: "/states", label: "State Laws" },
   { href: "/get-started", label: "Get Started" },
   { href: "/find", label: "Find Resources" },
   { href: "/curriculum", label: "Curriculum" },
+  { href: "/blog", label: "Blog" },
   { href: "/community", label: "Community" },
-  { href: "/forum", label: "Forum" },
 ];
 
 export function Header() {
@@ -51,7 +50,6 @@ export function Header() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <UserMenu />
             <Link
               href="/submit"
               className="px-4 py-2 text-sm font-medium text-white bg-primary hover:bg-primary-dark rounded-lg transition-colors"
@@ -95,10 +93,7 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <div className="pt-2 border-t border-border mt-2 space-y-2">
-              <div className="px-3 py-2">
-                <UserMenu />
-              </div>
+            <div className="pt-2 border-t border-border mt-2">
               <Link
                 href="/submit"
                 className="block px-3 py-2 text-base font-medium text-white bg-primary hover:bg-primary-dark rounded-lg text-center transition-colors"

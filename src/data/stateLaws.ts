@@ -19,7 +19,6 @@ export interface StateLawData {
   keyStatutes: string[];
   quickSummary: string;
   lastVerified: string;
-  hslda_link: string;
 }
 
 export const stateLaws: Record<string, StateLawData> = {
@@ -44,7 +43,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Ala. Code § 16-28-1", "Ala. Code § 16-28-3"],
     quickSummary: "Alabama offers very flexible homeschooling with minimal requirements. No notification is needed, and parents simply need to teach required subjects. You have complete freedom to design your curriculum.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/alabama",
   },
   alaska: {
     name: "Alaska",
@@ -67,7 +65,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Alaska Stat. § 14.03.100", "Alaska Stat. § 14.03.180"],
     quickSummary: "Alaska is extremely homeschool-friendly with virtually no regulations. Just notify your school district and you're free to educate your child however you see fit.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/alaska",
   },
   arizona: {
     name: "Arizona",
@@ -90,7 +87,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Ariz. Rev. Stat. § 15-802"],
     quickSummary: "Arizona allows homeschooling through private school registration. File with the state and conduct an annual evaluation—that's it! You have full curriculum freedom and access to sports through umbrella schools.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/arizona",
   },
   arkansas: {
     name: "Arkansas",
@@ -113,7 +109,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Ark. Code Ann. § 6-15-501"],
     quickSummary: "Arkansas requires parental notification and annual assessment through either standardized testing or professional evaluation. As long as a parent has a high school diploma, you can homeschool with these moderate requirements.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/arkansas",
   },
   california: {
     name: "California",
@@ -136,7 +131,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Cal. Educ. Code § 33000", "Cal. Educ. Code § 16600"],
     quickSummary: "California offers homeschooling through a private school affidavit or approved tutor status. The affidavit option is simple and requires no state approval—just file with your county.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/california",
   },
   colorado: {
     name: "Colorado",
@@ -159,7 +153,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Colo. Rev. Stat. § 22-33-104.5"],
     quickSummary: "Colorado requires notification to your school district and proof that you're teaching required subjects. No standardized testing needed, and you have flexibility in how you structure your program.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/colorado",
   },
   connecticut: {
     name: "Connecticut",
@@ -182,7 +175,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Conn. Gen. Stat. § 10-184"],
     quickSummary: "Connecticut requires superintendent notification and generally expects a reasonable curriculum covering required subjects. While the law requires 'approval,' homeschoolers who present adequate curriculum plans rarely face issues.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/connecticut",
   },
   delaware: {
     name: "Delaware",
@@ -205,7 +197,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Del. Code Ann. Tit. 14, § 1703"],
     quickSummary: "Delaware requires filing with both the state and your school district. You'll need to demonstrate a reasonable curriculum covering required subjects, but there's no standardized testing.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/delaware",
   },
   florida: {
     name: "Florida",
@@ -228,7 +219,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Fla. Stat. § 232.001", "Fla. Admin. Code 6A-6.0412"],
     quickSummary: "Florida allows you to register as a home education program and requires annual assessment. You can choose between portfolios, standardized testing, or evaluation by a certified teacher.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/florida",
   },
   georgia: {
     name: "Georgia",
@@ -251,7 +241,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Ga. Code Ann. § 20-2-690"],
     quickSummary: "Georgia treats homeschooling as a private school, requiring basic registration with your school board and annual assessment results. You have flexibility in choosing your assessment method.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/georgia",
   },
   hawaii: {
     name: "Hawaii",
@@ -274,7 +263,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Haw. Rev. Stat. § 302A-1103"],
     quickSummary: "Hawaii requires submitting an educational plan before starting, which includes Hawaiian history. No standardized testing is needed, just progress reports and documentation of your curriculum.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/hawaii",
   },
   idaho: {
     name: "Idaho",
@@ -297,7 +285,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Idaho Code § 33-202"],
     quickSummary: "Idaho is one of the most permissive states for homeschooling. Just notify your school district and you're free to homeschool with virtually no other requirements or restrictions.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/idaho",
   },
   illinois: {
     name: "Illinois",
@@ -320,7 +307,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["105 Ill. Comp. Stat. 5/26-1"],
     quickSummary: "Illinois allows homeschooling without notification or approval from the state. Simply teach required subjects and maintain an appropriate curriculum—you have complete freedom in structure and methodology.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/illinois",
   },
   indiana: {
     name: "Indiana",
@@ -343,7 +329,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Ind. Code § 20-33-2-1"],
     quickSummary: "Indiana has minimal homeschooling regulations. No state notification is required, and you have freedom to design your curriculum as long as required subjects are covered.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/indiana",
   },
   iowa: {
     name: "Iowa",
@@ -366,7 +351,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Iowa Code § 299.1"],
     quickSummary: "Iowa requires parents to have a high school diploma and maintain curriculum documentation covering required subjects. No notification needed, but you should keep records of your educational plan.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/iowa",
   },
   kansas: {
     name: "Kansas",
@@ -389,7 +373,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Kan. Stat. Ann. § 72-4701"],
     quickSummary: "Kansas offers very flexible homeschooling with minimal requirements. No state notification is needed, and there's no standardized testing—just teach required subjects and keep simple records.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/kansas",
   },
   kentucky: {
     name: "Kentucky",
@@ -412,7 +395,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Ky. Rev. Stat. § 159.010"],
     quickSummary: "Kentucky has minimal homeschooling regulations. No notification or testing is required—simply teach required subjects and maintain records of your curriculum materials.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/kentucky",
   },
   louisiana: {
     name: "Louisiana",
@@ -435,7 +417,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["La. Rev. Stat. § 17:236"],
     quickSummary: "Louisiana requires annual notification to your school board and annual assessment through either standardized testing, portfolio review, or evaluation by a certified educator.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/louisiana",
   },
   maine: {
     name: "Maine",
@@ -458,7 +439,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["20-A Me. Rev. Stat. § 5001-B"],
     quickSummary: "Maine requires annual notification, a curriculum plan, and annual assessment results. Choose between standardized testing, portfolio evaluation, or assessment by a teacher or professional.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/maine",
   },
   maryland: {
     name: "Maryland",
@@ -481,7 +461,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Md. Code Ann., Educ. § 7-301"],
     quickSummary: "Maryland requires notification to your school superintendent and annual assessment via either standardized testing or portfolio review by a certified evaluator. Both options are straightforward.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/maryland",
   },
   massachusetts: {
     name: "Massachusetts",
@@ -504,7 +483,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Mass. Gen. Laws c. 76, § 1"],
     quickSummary: "Massachusetts is one of the most regulated states. You must obtain superintendent approval before starting and maintain detailed curriculum documentation. Approval is typically granted if curriculum meets state standards.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/massachusetts",
   },
   michigan: {
     name: "Michigan",
@@ -527,7 +505,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Mich. Comp. Laws § 380.1352"],
     quickSummary: "Michigan allows homeschooling with minimal regulation. No state notification is needed, and there's no standardized testing requirement—just teach required subjects and keep records.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/michigan",
   },
   minnesota: {
     name: "Minnesota",
@@ -550,7 +527,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Minn. Stat. § 120A.22"],
     quickSummary: "Minnesota requires annual notification to your school district and curriculum documentation. No standardized testing is needed—you simply maintain records of your curriculum and your child's progress.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/minnesota",
   },
   mississippi: {
     name: "Mississippi",
@@ -573,7 +549,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Miss. Code Ann. § 37-13-91"],
     quickSummary: "Mississippi offers very flexible homeschooling with minimal requirements. No notification or testing is needed—simply teach required subjects and maintain curriculum documentation.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/mississippi",
   },
   missouri: {
     name: "Missouri",
@@ -596,7 +571,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Mo. Rev. Stat. § 167.031"],
     quickSummary: "Missouri has minimal homeschooling regulations. No state approval or standardized testing is required—just teach required subjects and keep records of your curriculum.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/missouri",
   },
   montana: {
     name: "Montana",
@@ -619,7 +593,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Mont. Code Ann. § 20-5-101"],
     quickSummary: "Montana is homeschool-friendly with only a simple notification requirement. File with your county superintendent and you're free to teach required subjects without standardized testing.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/montana",
   },
   nebraska: {
     name: "Nebraska",
@@ -642,7 +615,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Neb. Rev. Stat. § 79-1601"],
     quickSummary: "Nebraska requires notification to your superintendent and annual assessment through standardized testing or evaluation by a certified teacher. This ensures accountability while respecting parental choice.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/nebraska",
   },
   nevada: {
     name: "Nevada",
@@ -665,7 +637,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Nev. Rev. Stat. § 388.550"],
     quickSummary: "Nevada allows homeschooling without state approval or standardized testing. Register as a private school and teach required subjects with complete curriculum freedom.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/nevada",
   },
   "new-hampshire": {
     name: "New Hampshire",
@@ -688,7 +659,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["N.H. Rev. Stat. Ann. § 193:1"],
     quickSummary: "New Hampshire requires filing intent with your superintendent and maintaining a portfolio of your child's work. No standardized testing is needed—just keep samples that show progress.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/new-hampshire",
   },
   "new-jersey": {
     name: "New Jersey",
@@ -711,7 +681,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["N.J. Stat. Ann. § 18A:38-25"],
     quickSummary: "New Jersey has minimal homeschooling regulations. No state approval or standardized testing is required—teach required subjects and keep curriculum documentation.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/new-jersey",
   },
   "new-mexico": {
     name: "New Mexico",
@@ -734,7 +703,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["N.M. Stat. Ann. § 22-1-3"],
     quickSummary: "New Mexico requires filing a simple curriculum outline with the Department of Education. No standardized testing is needed—you just maintain progress records and curriculum documentation.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/new-mexico",
   },
   "new-york": {
     name: "New York",
@@ -757,7 +725,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["N.Y. Educ. Law § 3204", "8 N.Y.C.R.R. § 100.10"],
     quickSummary: "New York is one of the most regulated states. You must submit detailed curriculum plans and assessment results. Annual standardized testing is required for some grades, or evaluations by certified teachers.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/new-york",
   },
   "north-carolina": {
     name: "North Carolina",
@@ -780,7 +747,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["N.C. Gen. Stat. § 115C-564"],
     quickSummary: "North Carolina requires annual notification to your school district and annual assessment via standardized testing or evaluation by a certified teacher. Annual notification and assessment results are your main obligations.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/north-carolina",
   },
   "north-dakota": {
     name: "North Dakota",
@@ -803,7 +769,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["N.D. Cent. Code § 15.1-23-09"],
     quickSummary: "North Dakota is one of the most regulated states. Parents must complete a teacher training course, conduct annual standardized testing, and submit curriculum approval. This state requires significant compliance.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/north-dakota",
   },
   ohio: {
     name: "Ohio",
@@ -826,7 +791,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Ohio Rev. Code § 3321.04"],
     quickSummary: "Ohio requires annual notification and assessment through standardized testing, portfolios, or professional evaluation. You have flexibility in choosing your assessment method while maintaining curriculum documentation.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/ohio",
   },
   oklahoma: {
     name: "Oklahoma",
@@ -849,7 +813,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["70 Okla. Stat. § 10-105"],
     quickSummary: "Oklahoma has very flexible homeschooling laws. No notification or testing is required—simply teach required subjects with no state oversight or approval needed.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/oklahoma",
   },
   oregon: {
     name: "Oregon",
@@ -872,7 +835,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Ore. Rev. Stat. § 339.030"],
     quickSummary: "Oregon requires notification to your school district and annual assessment through standardized testing, portfolio review, or teacher evaluation. No specific parent qualifications are required.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/oregon",
   },
   pennsylvania: {
     name: "Pennsylvania",
@@ -895,7 +857,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["24 Pa. Cons. Stat. § 13-1327.1"],
     quickSummary: "Pennsylvania is one of the most regulated states. Parents must have high school diploma, obtain superintendent approval, and employ a supervisor with a bachelor's degree. This state requires significant educational oversight.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/pennsylvania",
   },
   "rhode-island": {
     name: "Rhode Island",
@@ -918,7 +879,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["R.I. Gen. Laws § 16-37-2.1"],
     quickSummary: "Rhode Island is highly regulated and requires superintendent approval before starting. You'll need to submit curriculum plans and undergo annual standardized assessment. Approval is achievable with proper documentation.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/rhode-island",
   },
   "south-carolina": {
     name: "South Carolina",
@@ -941,7 +901,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["S.C. Code Ann. § 59-65-40"],
     quickSummary: "South Carolina requires annual notification and assessment through standardized testing, teacher evaluation, or parent-conducted assessment with portfolio review. Flexibility in assessment method makes compliance manageable.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/south-carolina",
   },
   "south-dakota": {
     name: "South Dakota",
@@ -964,7 +923,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["S.D. Codified Laws § 13-27-1"],
     quickSummary: "South Dakota has minimal homeschooling regulations with just a simple notification requirement to your school district. No standardized testing or approval is needed—teach required subjects and keep records.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/south-dakota",
   },
   tennessee: {
     name: "Tennessee",
@@ -987,7 +945,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Tenn. Code Ann. § 49-6-3001"],
     quickSummary: "Tennessee requires notification to your school district and annual assessment through standardized testing, portfolios, or evaluation by a certified teacher. You have flexibility in choosing your assessment method.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/tennessee",
   },
   texas: {
     name: "Texas",
@@ -1010,7 +967,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Tex. Educ. Code § 11.001"],
     quickSummary: "Texas is one of the most permissive states. No notification or approval is needed, and there's no standardized testing. You have complete freedom in curriculum design and educational approach.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/texas",
   },
   utah: {
     name: "Utah",
@@ -1033,7 +989,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Utah Code § 53E-10-102"],
     quickSummary: "Utah allows homeschooling with minimal regulation. No notification or approval is needed, and you have complete curriculum freedom. Simply keep records to show educational instruction.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/utah",
   },
   vermont: {
     name: "Vermont",
@@ -1056,7 +1011,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Vt. Stat. Ann. Tit. 16, § 4407"],
     quickSummary: "Vermont requires superintendent approval of your educational plan and annual assessment. While regulated, approval is typically granted if your plan demonstrates adequate coverage of required subjects.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/vermont",
   },
   virginia: {
     name: "Virginia",
@@ -1079,7 +1033,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Va. Code Ann. § 22.1-254.1"],
     quickSummary: "Virginia requires annual notification and assessment through standardized testing, portfolios, or evaluation by a certified professional. You have flexibility in choosing your assessment method.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/virginia",
   },
   washington: {
     name: "Washington",
@@ -1102,7 +1055,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Wash. Rev. Code § 28A.225.010"],
     quickSummary: "Washington requires annual notification and assessment through standardized testing, credential holder evaluation, or portfolio review. Flexibility in assessment options makes compliance straightforward.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/washington",
   },
   "west-virginia": {
     name: "West Virginia",
@@ -1125,7 +1077,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["W. Va. Code § 18-8-1"],
     quickSummary: "West Virginia requires filing a curriculum plan with your county superintendent and confirms that a parent has at least a high school diploma. No standardized testing is required—focus on curriculum documentation.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/west-virginia",
   },
   wisconsin: {
     name: "Wisconsin",
@@ -1148,7 +1099,6 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Wis. Stat. § 118.165"],
     quickSummary: "Wisconsin allows homeschooling without state notification or approval. Simply operate as a private school and maintain records of instruction in required subjects.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/wisconsin",
   },
   wyoming: {
     name: "Wyoming",
@@ -1171,6 +1121,5 @@ export const stateLaws: Record<string, StateLawData> = {
     keyStatutes: ["Wyo. Stat. Ann. § 21-4-101"],
     quickSummary: "Wyoming has minimal homeschooling regulations with no state notification required. You have complete freedom in curriculum design and teaching methods—just maintain basic educational records.",
     lastVerified: "2025-02",
-    hslda_link: "https://hslda.org/legal-analysis/wyoming",
   },
 };

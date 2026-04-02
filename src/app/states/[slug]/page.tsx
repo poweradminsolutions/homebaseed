@@ -379,25 +379,6 @@ export default async function StatePage({
                 </nav>
               </div>
 
-              {/* External Resources */}
-              <div className="bg-primary-light border border-primary/20 rounded-lg p-6">
-                <h3 className="font-semibold text-foreground mb-3">
-                  External Resources
-                </h3>
-                <p className="text-sm text-muted mb-4">
-                  Learn more about homeschooling in {lawData.name}:
-                </p>
-                <a
-                  href={lawData.hslda_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-primary hover:text-primary/80 font-medium text-sm"
-                >
-                  HSLDA Legal Analysis
-                  <span className="ml-2">→</span>
-                </a>
-              </div>
-
               {/* Last Verified */}
               <div className="bg-white border border-border rounded-lg p-6">
                 <p className="text-xs text-muted uppercase tracking-wide font-semibold mb-2">

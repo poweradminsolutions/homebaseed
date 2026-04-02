@@ -65,8 +65,9 @@ export default function StatesPage() {
               {Object.entries(regulationLabels).map(([level, label]) => (
                 <div key={level} className="flex items-start space-x-3">
                   <div
-                    className="flex-shrink-0 w-4 h-4 rounded-full mt-1"
-                    style={{ backgroundColor: regulationColors[level as keyof typeof regulationColors].fill }}
+                    className={`flex-shrink-0 w-4 h-4 rounded-full mt-1 ${
+                      regulationColors[level as keyof typeof regulationColors].fill
+                    }`}
                   />
                   <div>
                     <p className="font-medium text-foreground text-sm">{label}</p>

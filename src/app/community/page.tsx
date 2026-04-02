@@ -390,7 +390,18 @@ function CoOpCard({ coop }: { coop: CoOp }) {
     <div className="bg-white border border-border rounded-lg p-5 hover:shadow-md hover:border-primary/30 transition-all">
       <div className="flex items-start justify-between gap-3 mb-3">
         <h3 className="font-bold text-foreground text-base leading-tight">
-          {coop.name}
+          {coop.website ? (
+            <a
+              href={coop.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors underline underline-offset-2 decoration-primary/30 hover:decoration-primary"
+            >
+              {coop.name}
+            </a>
+          ) : (
+            coop.name
+          )}
         </h3>
         <span
           className={`text-xs font-medium px-2 py-1 rounded whitespace-nowrap ${

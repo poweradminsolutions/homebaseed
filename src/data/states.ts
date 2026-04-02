@@ -5,10 +5,6 @@ export interface StateInfo {
   regulationLevel: "low" | "moderate" | "high";
 }
 
-// Regulation levels sourced from HSLDA (hslda.org/legal), April 2026.
-// HSLDA's "No notice, low regulation" and "Low regulation" are both mapped to "low".
-// HSLDA's "Moderate regulation" maps to "moderate".
-// HSLDA's "High regulation" maps to "high".
 export const states: StateInfo[] = [
   { name: "Alabama", abbreviation: "AL", slug: "alabama", regulationLevel: "low" },
   { name: "Alaska", abbreviation: "AK", slug: "alaska", regulationLevel: "low" },
