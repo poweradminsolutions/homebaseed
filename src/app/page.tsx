@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SearchBar } from "@/components/ui/SearchBar";
 import { USMap } from "@/components/map/USMap";
+import { HomeschoolCounter } from "@/components/ui/HomeschoolCounter";
 
 const features = [
   {
@@ -54,7 +55,6 @@ const stats = [
   { label: "States Covered", value: "50" },
   { label: "Resource Categories", value: "12+" },
   { label: "Always Free", value: "100%" },
-  { label: "No Ads, Ever", value: "Zero" },
 ];
 
 export default function HomePage() {
@@ -118,6 +118,7 @@ export default function HomePage() {
                 <div className="mt-1 text-sm text-muted">{stat.label}</div>
               </div>
             ))}
+            <HomeschoolCounter />
           </div>
         </div>
       </section>
