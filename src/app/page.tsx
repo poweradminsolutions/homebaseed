@@ -51,11 +51,7 @@ const features = [
   },
 ];
 
-const stats = [
-  { label: "States Covered", value: "50" },
-  { label: "Resource Categories", value: "12+" },
-  { label: "Always Free", value: "100%" },
-];
+// Stats removed - replaced by standalone HomeschoolCounter
 
 export default function HomePage() {
   return (
@@ -106,20 +102,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats Bar */}
+      {/* Social Proof Counter */}
       <section className="bg-white border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            {stats.map((stat) => (
-              <div key={stat.label}>
-                <div className="text-2xl sm:text-3xl font-bold text-primary">
-                  {stat.value}
-                </div>
-                <div className="mt-1 text-sm text-muted">{stat.label}</div>
-              </div>
-            ))}
-            <HomeschoolCounter />
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
+          <HomeschoolCounter />
         </div>
       </section>
 

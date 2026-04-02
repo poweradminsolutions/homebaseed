@@ -104,10 +104,12 @@ export function HomeschoolCounter() {
 
   return (
     <div ref={ref}>
-      <div className="text-2xl sm:text-3xl font-bold text-primary tabular-nums">
+      <div className="text-4xl sm:text-5xl lg:text-6xl font-bold text-primary tabular-nums">
         {formatted}
       </div>
-      <div className="mt-1 text-sm text-muted">Kids Homeschooled</div>
+      <div className="mt-2 text-base sm:text-lg text-muted">
+        kids are being homeschooled in the US right now
+      </div>
     </div>
   );
 }
