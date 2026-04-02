@@ -764,7 +764,7 @@ export type Database = {
         | "conference"
         | "co-op-day"
         | "testing"
-      regulation_level: "none" | "low" | "moderate" | "high"
+      regulation_level: "low" | "moderate" | "high"
       resource_type:
         | "co-op"
         | "tutor"

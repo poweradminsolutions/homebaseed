@@ -355,7 +355,6 @@ function Step5Results({ data }: { data: WizardData }) {
               <p className="text-sm text-muted mb-2">Regulation Level</p>
               <div className="inline-block">
                 <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                  regulationLevel === 'none' ? 'bg-green-100 text-green-800' :
                   regulationLevel === 'low' ? 'bg-green-50 text-green-700' :
                   regulationLevel === 'moderate' ? 'bg-yellow-50 text-yellow-700' :
                   'bg-red-50 text-red-700'

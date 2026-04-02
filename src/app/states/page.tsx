@@ -61,25 +61,22 @@ export default function StatesPage() {
             <h2 className="text-sm font-semibold text-primary uppercase tracking-wide mb-4">
               Understanding Regulation Levels
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {Object.entries(regulationLabels).map(([level, label]) => (
                 <div key={level} className="flex items-start space-x-3">
                   <div
-                    className={`flex-shrink-0 w-4 h-4 rounded-full mt-1 ${
-                      regulationColors[level as keyof typeof regulationColors].fill
-                    }`}
+                    className="flex-shrink-0 w-4 h-4 rounded-full mt-1"
+                    style={{ backgroundColor: regulationColors[level as keyof typeof regulationColors].fill }}
                   />
                   <div>
                     <p className="font-medium text-foreground text-sm">{label}</p>
                     <p className="text-xs text-muted mt-1">
-                      {level === "none" &&
-                        "Minimal to no state oversight of homeschools"}
                       {level === "low" &&
-                        "Basic notification or registration required"}
+                        "Little to no notification or oversight required"}
                       {level === "moderate" &&
-                        "Significant compliance requirements"}
+                        "Notification, testing, or evaluation required"}
                       {level === "high" &&
-                        "Extensive regulations and oversight"}
+                        "Curriculum approval, testing, and detailed record-keeping"}
                     </p>
                   </div>
                 </div>

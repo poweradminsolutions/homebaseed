@@ -128,7 +128,7 @@ function USMapInner() {
 
       {/* Legend */}
       <div className="mt-4 flex items-center justify-center gap-6 flex-wrap">
-        {(["none", "low", "moderate", "high"] as const).map((level) => {
+        {(["low", "moderate", "high"] as const).map((level) => {
           const colors = regulationColors[level];
           return (
             <div key={level} className="flex items-center gap-2">
