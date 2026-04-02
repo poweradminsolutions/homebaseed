@@ -65,11 +65,11 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground tracking-tight">
-              Your Homeschool{" "}
-              <span className="text-primary">Command Center</span>
+              Everything You Need To{" "}
+              <span className="text-primary">Homeschool</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted leading-relaxed">
-              Every state law, every curriculum option, every co-op near you.
+              Every state law, curriculum recommendations, co-ops near you.
               One place, zero bias, always free.
             </p>
             <div className="mt-8 max-w-xl mx-auto">
