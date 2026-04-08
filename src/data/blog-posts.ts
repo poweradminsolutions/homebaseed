@@ -14,6 +14,335 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "how-to-homeschool-in-texas-2026",
+    title: "How to Homeschool in Texas: Complete 2026 Guide",
+    description: "Everything you need to know about homeschooling in Texas. Laws, required subjects, getting started steps, curriculum options, UIL sports, and co-ops.",
+    author: "The Homeschool Source Team",
+    publishedAt: "2026-04-06",
+    category: "state-laws",
+    tags: ["texas-homeschool", "homeschool-laws", "state-requirements", "getting-started"],
+    readingTime: 11,
+    featured: false,
+    content: `
+<h2>Texas Is One of the Best States in the Country for Homeschooling</h2>
+
+<p>If you live in Texas and you're thinking about homeschooling, you picked a good state for it. Texas has some of the most homeschool-friendly laws in the country, with no registration requirements, no mandatory testing, and no government oversight of your curriculum. And recent legislation has made things even better, with new protections for homeschool families and expanded access to public school extracurriculars.</p>
+
+<p>This guide covers everything you need to know to homeschool legally in Texas in 2026, from the basic legal requirements to practical steps for getting started, choosing curriculum, and connecting with your local homeschool community.</p>
+
+<h2>Texas Homeschool Laws: What's Actually Required</h2>
+
+<p>In Texas, homeschools are treated as private schools for the purpose of compulsory attendance. This is the foundation of homeschool freedom in the state. Private schools in Texas are not regulated by the state, which means the Texas Education Agency (TEA) has no authority over your homeschool.</p>
+
+<p>Here's what Texas law requires of homeschool families:</p>
+
+<h3>Five Required Subjects</h3>
+
+<p>You must provide instruction in five areas: reading, spelling, grammar, mathematics, and good citizenship. That's it. There's no required curriculum, no approved textbook list, no mandated number of hours per day, and no specific grade-level benchmarks you have to hit. You choose how to teach these subjects, what materials to use, and how to structure your days.</p>
+
+<p>Notice that science, history, and other subjects aren't on the required list. Most families teach them anyway (and you absolutely should), but legally, the five subjects above are the minimum.</p>
+
+<h3>Bona Fide Instruction</h3>
+
+<p>Texas law requires that instruction be "bona fide," meaning it's genuine and pursued in good faith. You need to actually be teaching your kids, not just keeping them home. There's no specific definition of what "bona fide" looks like in practice, and it's never been tested in a way that created measurable standards. But as long as you're consistently providing educational instruction, you're meeting this requirement.</p>
+
+<h3>No Registration or Notification</h3>
+
+<p>You do not need to register with the state, notify your school district, or get anyone's permission to homeschool in Texas. There's no paperwork to file, no annual reports, and no approval process. If your child has never been enrolled in public school, you can simply start homeschooling whenever you're ready.</p>
+
+<h3>No Testing Requirements</h3>
+
+<p>Texas does not require homeschooled students to take standardized tests. Some families choose to test voluntarily (the Iowa Test of Basic Skills and the Stanford Achievement Test are popular options) for their own tracking purposes, but it's not required by law.</p>
+
+<h3>No Parent Qualifications</h3>
+
+<p>You don't need a teaching certificate, a college degree, or any specific credentials to homeschool in Texas. If you're a parent or legal guardian, you can teach your own children.</p>
+
+<h2>The Homeschool Freedom Act of 2025</h2>
+
+<p>In 2025, Texas passed HB 2674, known as the Homeschool Freedom Act. This law explicitly prohibits state agencies from regulating homeschooling. It was passed to reinforce and clarify protections that homeschool families already had under existing case law, and to prevent any future attempts at state regulation.</p>
+
+<p>What this means in practice: no state agency can require you to register, submit curriculum plans, take tests, or undergo inspections. The law puts a clear wall between the state and your homeschool. It's one of the strongest homeschool protection laws in the country.</p>
+
+<h2>How to Start: Step by Step</h2>
+
+<h3>If Your Child Is Already in Public School</h3>
+
+<p>If your child is currently enrolled in a Texas public school, you need to officially withdraw them. Send a written letter to the school (email works too, but keep a copy) stating that you are withdrawing your child to homeschool. You don't need to provide details about your curriculum or plans. A simple statement that you are establishing a private school (homeschool) and will be providing instruction in reading, spelling, grammar, mathematics, and good citizenship is sufficient.</p>
+
+<p>Some districts may push back, ask for additional documentation, or try to discourage you. They don't have the legal authority to deny your withdrawal. If you run into resistance, the Texas Home School Coalition (THSC) offers free legal assistance to homeschool families.</p>
+
+<h3>If Your Child Has Never Been in Public School</h3>
+
+<p>There's nothing to do from a legal standpoint. No notification, no filing. Just start teaching.</p>
+
+<h3>If You're Withdrawing Mid-Year</h3>
+
+<p>You can withdraw your child at any time during the school year. There's no requirement to wait until the end of a semester or school year. Some families worry about truancy concerns during the transition period. As long as you've sent your withdrawal letter and begun homeschooling, you're covered.</p>
+
+<h2>Choosing Curriculum for Your Texas Homeschool</h2>
+
+<p>Since Texas has no curriculum requirements beyond the five subjects, you have complete freedom to choose materials and methods that fit your family. Here's a practical overview of popular approaches Texas families use:</p>
+
+<h3>Structured and Traditional</h3>
+
+<p><strong>Abeka</strong> offers a full, structured K-12 curriculum with a Christian worldview. It's textbook-heavy and follows a traditional school format, which works well for families who want clear daily lesson plans and a familiar structure. <strong>Saxon Math</strong> is a popular standalone math curriculum known for its incremental approach and constant review, which helps concepts stick over time.</p>
+
+<p><strong>The Good and the Beautiful</strong> combines language arts, reading, and art appreciation into one curriculum with a gentle, wholesome approach. Many Texas families use it for the elementary years. It's available for free digitally, which is a significant plus for families watching their budget.</p>
+
+<h3>Classical Education</h3>
+
+<p>Classical education is popular in Texas, with a strong network of classical co-ops and tutorials across the state. <strong>Classical Conversations</strong> is a national program with local communities throughout Texas that meets weekly. <strong>Memoria Press</strong> and <strong>Veritas Press</strong> are solid classical curriculum options that work well for families doing classical education at home.</p>
+
+<h3>Charlotte Mason</h3>
+
+<p>The Charlotte Mason method uses "living books" (real literature rather than textbooks), nature study, narration, and short lessons. <strong>Ambleside Online</strong> is a free Charlotte Mason curriculum that's comprehensive and well-organized. <strong>Sonlight</strong> is a literature-based curriculum that aligns well with Charlotte Mason principles, though it's also used by families following other approaches.</p>
+
+<h3>Interest-Led and Eclectic</h3>
+
+<p>Many Texas homeschool families don't follow any single curriculum or method. They pull from multiple sources, follow their kids' interests, and adjust as they go. This eclectic approach is one of the biggest advantages of homeschooling: you aren't locked into any particular system. If Singapore Math works better for your kid than Teaching Textbooks, you switch. If your child devours historical fiction, you build your history curriculum around that. If a curriculum isn't working after a fair trial, you drop it without guilt.</p>
+
+<h2>UIL Sports and Activities: A Game Changer for Texas Homeschoolers</h2>
+
+<p>One of the biggest developments for Texas homeschoolers in recent years is SB 401, which opened up University Interscholastic League (UIL) activities to homeschooled students starting in the 2025-2026 school year. UIL governs public school extracurriculars in Texas, including football, basketball, track, band, debate, academic competitions, and more.</p>
+
+<h3>How It Works</h3>
+
+<p>Under the new law, all Texas school districts allow homeschool UIL participation by default. Individual school boards can vote to opt out, but the default is participation. If your local district opts out, your student can participate in the nearest neighboring district that allows it.</p>
+
+<h3>Eligibility Requirements</h3>
+
+<p>Homeschooled students must meet the same eligibility requirements as public school students, including age, residency, and conduct standards. There's also an academic component: during the first six weeks of competition, homeschool students need to provide a score that's average or above on a nationally normed standardized test of the parent's choice. Many families use tests like the Iowa Assessments or the Stanford Achievement Test to satisfy this requirement.</p>
+
+<p>This is a huge deal for families who want the academic freedom of homeschooling but don't want their kids to miss out on competitive sports, band, debate, or other UIL activities. It's worth checking with your local district to confirm their participation status.</p>
+
+<h2>Homeschool Co-ops and Community in Texas</h2>
+
+<p>Texas has one of the most active homeschool communities in the country. Most metro areas have dozens of co-ops, and even rural areas typically have at least a few options within driving distance.</p>
+
+<h3>Types of Co-ops</h3>
+
+<p>Co-ops in Texas range from casual weekly meetups to structured academic programs. Some are parent-taught (everyone takes turns teaching), while others hire teachers. Some are secular, some are faith-based, and some welcome everyone. Academic co-ops might cover subjects like science labs, writing workshops, foreign languages, or fine arts. Social co-ops focus more on field trips, park days, and group activities.</p>
+
+<h3>Finding Your Community</h3>
+
+<p>Start by searching Facebook for homeschool groups in your city or county. Most areas have active Facebook groups where families share information about co-ops, field trips, and local resources. The Homeschool Source directory (that's us) also lists homeschool groups, co-ops, and resources by state. Your local library is another good starting point, as many Texas libraries run homeschool-specific programs during school hours.</p>
+
+<h2>Record Keeping: Not Required, But Smart</h2>
+
+<p>Texas doesn't require you to keep any records. But experienced homeschool families will tell you to keep them anyway, for your own benefit. Here's what's worth tracking:</p>
+
+<ul>
+<li><strong>Attendance:</strong> A simple calendar marking school days is enough. Useful if you ever need to demonstrate that instruction is happening.</li>
+<li><strong>Curriculum and materials:</strong> Keep a list of what you use each year. This helps when you're planning future years and when you're building a transcript for high school students.</li>
+<li><strong>Work samples:</strong> Save a portfolio of your child's work from each year. Writing samples, test scores (if you test), project photos, and book lists paint a picture of progress over time.</li>
+<li><strong>High school transcript:</strong> If your child is college-bound, you'll need a transcript. Start building it freshman year. Include course titles, grades, credits, and a GPA. Texas homeschool parents create their own transcripts, and colleges accept them.</li>
+</ul>
+
+<h2>College and Financial Aid for Texas Homeschoolers</h2>
+
+<p>Texas colleges and universities accept homeschooled applicants. Most public universities require SAT or ACT scores, a homeschool transcript, and sometimes a GED or portfolio. Policies vary by school, so check with the admissions office of any college your student is considering.</p>
+
+<p>An important update: HB 3041, passed in 2025, clarified that homeschooled students in Texas are eligible for state financial aid programs, including TEXAS Grants, starting with applications for the Fall 2026 semester. This is significant because it removes a barrier that previously made state financial aid harder for homeschool graduates to access.</p>
+
+<p>Community colleges in Texas are generally very homeschool-friendly and often the easiest on-ramp to higher education. Many Texas homeschoolers also take dual-credit courses through community colleges during high school, earning college credits while still homeschooling.</p>
+
+<h2>Common Questions Texas Parents Ask</h2>
+
+<h3>Can I homeschool if I work full time?</h3>
+
+<p>Yes. Many Texas homeschool families have two working parents. Flexible schedules, evening and weekend schooling, online curriculum, and co-ops that meet during specific days can all make it work. It requires more planning, but it's done every day by thousands of families.</p>
+
+<h3>What about special education services?</h3>
+
+<p>Homeschooled students in Texas are generally not eligible for public school special education services (IEPs), since those are tied to public school enrollment. However, some districts offer limited services to private school students, which can include homeschoolers. It varies by district. Many families use private therapists, tutors, and specialized homeschool curriculum to support children with learning differences.</p>
+
+<h3>Do homeschooled students get a diploma?</h3>
+
+<p>In Texas, homeschool parents issue their own diplomas. There's no state-issued homeschool diploma. The diploma you create is legally equivalent to a public school diploma. Colleges, employers, and the military all accept homeschool diplomas from Texas families.</p>
+
+<h3>Is there a compulsory attendance age?</h3>
+
+<p>Texas compulsory attendance applies to children ages 6 through 19. Before age 6, there's no legal requirement to provide instruction (though many families start earlier by choice). After age 19, the compulsory attendance law no longer applies.</p>
+
+<h2>Getting Started: Your First Week Checklist</h2>
+
+<p>Here's a practical checklist for your first week of homeschooling in Texas:</p>
+
+<ul>
+<li>If your child is enrolled in public school, send a withdrawal letter to the school.</li>
+<li>Choose curriculum for the five required subjects (reading, spelling, grammar, math, good citizenship). You can start simple and adjust later.</li>
+<li>Set up a basic daily schedule. It doesn't need to be rigid. Even a rough outline of "math in the morning, reading after lunch" gives your days structure.</li>
+<li>Join a local homeschool Facebook group for your city or region. Ask questions, attend a park day, and start meeting other homeschool families.</li>
+<li>Start a simple record-keeping system (a binder, a spreadsheet, whatever works for you).</li>
+<li>Take a deep breath. You don't need to have everything figured out on day one. Most homeschool families spend their first semester finding their rhythm, and that's completely normal.</li>
+</ul>
+
+<p>Texas gives you more homeschool freedom than almost any other state. You don't need permission, you don't need approval, and you don't need to follow anyone else's plan. You just need to teach your kids. Start there, and figure out the rest as you go.</p>
+    `,
+  },
+  {
+    slug: "homeschooling-child-with-adhd",
+    title: "Homeschooling a Child with ADHD: Strategies That Actually Work",
+    description: "Practical guide to homeschooling kids with ADHD. Curriculum picks, scheduling tips, and teaching strategies from families who've figured it out.",
+    author: "The Homeschool Source Team",
+    publishedAt: "2026-04-03",
+    category: "special-needs",
+    tags: ["adhd", "special-needs-homeschool", "learning-differences", "curriculum-adaptations", "executive-function"],
+    readingTime: 11,
+    featured: false,
+    content: `
+<h2>Why Homeschooling Works So Well for Kids with ADHD</h2>
+
+<p>If your child has ADHD and you're considering homeschooling, here's something worth knowing: many families who make the switch say it was one of the best decisions they ever made. Not because homeschooling is a cure for ADHD (it isn't), but because it removes many of the structural mismatches that make traditional school so frustrating for these kids.</p>
+
+<p>Think about what a typical school day asks of a child with ADHD: sit still for 45 minutes, transition quickly between subjects, ignore 25 other kids, focus on material that might not be at the right pace, and do it all on someone else's schedule. For a kid whose brain is wired differently, that's a recipe for daily failure, not because they aren't smart, but because the environment doesn't fit.</p>
+
+<p>Homeschooling lets you build the environment around your child instead of forcing your child into an environment that doesn't work. You control the schedule, the pacing, the movement breaks, the curriculum, and the expectations. That flexibility is the single biggest advantage.</p>
+
+<h2>Understanding ADHD in the Learning Environment</h2>
+
+<p>Before diving into strategies, it helps to understand what ADHD actually looks like in a learning context. ADHD isn't just "can't sit still." It's a neurological difference that affects executive function, which includes working memory, time management, task initiation, emotional regulation, and sustained attention.</p>
+
+<h3>What This Means for Homeschooling</h3>
+
+<p>Your child might be able to hyper-focus on dinosaurs for three hours but can't sustain attention on a math worksheet for ten minutes. They might have brilliant ideas but struggle to get them on paper. They might understand a concept on Monday and completely forget it by Wednesday. They might need to move their body constantly while learning, or they might zone out during read-alouds but absorb everything from an audiobook.</p>
+
+<p>None of this means your child can't learn. It means they learn differently, and your homeschool should be designed around those differences rather than fighting against them.</p>
+
+<h2>Scheduling: Short Blocks, Frequent Breaks, and Flexibility</h2>
+
+<p>The traditional school model of 45-minute class periods doesn't work well for most kids with ADHD. Here's what does:</p>
+
+<h3>The 15-20-15 Approach</h3>
+
+<p>Many ADHD homeschool families find success with short, focused work periods: 15 to 20 minutes of concentrated work, followed by a 5 to 10 minute break. This isn't a failure of discipline. It's working with your child's neurology instead of against it. Research on attention spans in children with ADHD supports shorter bursts of focused work with movement breaks between them.</p>
+
+<p>A morning might look like this: 15 minutes of math, 5-minute break with jumping jacks or a trip to the trampoline, 20 minutes of reading together, 10-minute snack break, 15 minutes of writing practice, 5-minute break, 20 minutes of science. You've covered four subjects in under two hours, with enough movement and variety to keep your child engaged.</p>
+
+<h3>Front-Load the Hard Stuff</h3>
+
+<p>Most kids with ADHD have better focus in the morning (though not all, so watch your own child's patterns). Schedule the subjects that require the most sustained attention first. For many families, that means math and writing happen before lunch, and more hands-on subjects like science experiments or art happen in the afternoon when focus tends to wane.</p>
+
+<h3>Build in Movement</h3>
+
+<p>Movement isn't a reward for good behavior. It's a neurological need. Some families start each day with 20 to 30 minutes of physical activity before any academics. Others build movement into the learning itself: counting while jumping rope, spelling words while bouncing a ball, doing math facts on a whiteboard while standing, or listening to history audiobooks while walking.</p>
+
+<p>Fidget tools, standing desks, wobble stools, and exercise balls as chairs can also help. Let your child figure out what works for them. Some kids need to squeeze a stress ball while listening. Others need to pace. The goal is productive movement that supports focus, not stillness for its own sake.</p>
+
+<h2>Curriculum Picks for ADHD Learners</h2>
+
+<p>Not every curriculum works well for kids with ADHD. You want materials that are visually engaging, broken into manageable chunks, and offer multiple ways to interact with content. Here are specific recommendations by subject:</p>
+
+<h3>Math</h3>
+
+<p><strong>Teaching Textbooks</strong> is a top pick for ADHD learners. The video lessons are short, the immediate feedback keeps kids engaged, and the automatic grading removes the parent nagging factor. Your child can work at their own pace, and the program adjusts difficulty based on performance.</p>
+
+<p><strong>Beast Academy</strong> works well for ADHD kids who love stories and creative problem-solving. The comic book format keeps attention in ways that traditional textbook pages don't. The puzzles and challenges tap into that ADHD capacity for hyper-focus when something is genuinely interesting.</p>
+
+<p><strong>Math-U-See</strong> is worth mentioning for its multi-sensory approach. It uses physical manipulative blocks that students touch and move while learning concepts. For kinesthetic learners with ADHD, having something concrete to hold and manipulate makes abstract math concepts click in ways that worksheets never will.</p>
+
+<p><strong>Khan Academy</strong> (free) works as a supplement. Short videos, immediate practice, and the ability to repeat concepts as many times as needed without anyone knowing or judging. Many ADHD kids prefer learning from a screen to learning from a page.</p>
+
+<h3>Language Arts and Reading</h3>
+
+<p><strong>All About Reading</strong> is a multi-sensory reading program that uses letter tiles, flashcards, and engaging readers. The lessons are short (15 to 20 minutes) and involve physical manipulation of materials, which keeps ADHD learners engaged. It works particularly well for kids who struggle with traditional phonics worksheets.</p>
+
+<p><strong>Brave Writer</strong> takes a gentle, interest-led approach to writing that works well for ADHD kids who freeze up when faced with blank pages and rigid writing prompts. Instead of formula-based writing, Brave Writer builds writing skills through conversation, dictation, and short bursts of freewriting. It meets kids where they are rather than demanding output they aren't ready for.</p>
+
+<p>For reluctant readers, audiobooks paired with physical books can be game-changing. Services like Audible or Libby (free through your library) let your child follow along in the book while listening. This dual-input approach helps ADHD readers maintain focus and builds reading stamina over time.</p>
+
+<h3>Science</h3>
+
+<p><strong>Real Science Odyssey</strong> and <strong>BFSU (Building Foundations of Scientific Understanding)</strong> both emphasize hands-on experiments and observation over textbook reading. ADHD kids often thrive in science because experiments are inherently engaging, multisensory, and provide immediate results.</p>
+
+<p><strong>Apologia</strong> science (for families wanting a faith-based approach) uses a conversational, notebook-based format with built-in experiments. The conversational tone keeps readers engaged better than dry textbook prose.</p>
+
+<p>For any science curriculum, lean heavily into the experiment and observation components. If your child can watch something happen, touch it, build it, or take it apart, they'll learn it far more effectively than reading about it.</p>
+
+<h3>History and Social Studies</h3>
+
+<p><strong>Story of the World</strong> presents history as a narrative, which taps into the ADHD brain's preference for stories over facts. The audiobook versions (read by Jim Weiss) are particularly effective for auditory learners. Pair these with the activity guide for hands-on projects like building Roman arches or making Egyptian papyrus, and you've got a history curriculum that ADHD kids actually enjoy.</p>
+
+<p>Documentary series, historical fiction, and virtual museum tours can supplement or even replace traditional history textbooks. Many ADHD learners absorb more from a well-made documentary than from any amount of reading.</p>
+
+<h2>Executive Function: The Hidden Challenge</h2>
+
+<p>ADHD doesn't just affect attention. It affects executive function, the set of mental skills that includes organizing, planning, starting tasks, managing time, and regulating emotions. In a homeschool context, this shows up as difficulty starting assignments, losing track of materials, underestimating how long tasks take, and getting overwhelmed by multi-step projects.</p>
+
+<h3>External Scaffolding</h3>
+
+<p>Your child's brain doesn't naturally create the internal systems that neurotypical kids develop for managing tasks. So you provide external scaffolding until those systems develop (which they will, often later than in neurotypical peers). This looks like:</p>
+
+<ul>
+<li>Visual schedules posted on the wall showing the day's tasks with checkboxes</li>
+<li>Timers (visual timers like the Time Timer are especially helpful) so your child can see how much time is left for each task</li>
+<li>Checklists for multi-step processes (morning routine, math lesson steps, writing process)</li>
+<li>A designated "landing spot" for all school materials so nothing gets lost</li>
+<li>Color-coded folders or bins for each subject</li>
+</ul>
+
+<p>These aren't crutches. They're tools. Many successful adults with ADHD use external organizational systems their entire lives. Teaching your child to use these tools early is giving them a lifelong advantage.</p>
+
+<h3>Task Initiation</h3>
+
+<p>Getting started is often the hardest part for ADHD kids. Some strategies that help: sit down with your child and do the first problem together. Use a "body double" approach where you work nearby on your own tasks while they work on theirs. Set a timer for just five minutes ("you only have to work for five minutes, then you can stop if you want"). Most of the time, once they start, the momentum carries them forward.</p>
+
+<h2>When to Consider Medication and Professional Support</h2>
+
+<p>Homeschooling accommodates many ADHD challenges naturally, but it isn't a substitute for professional support when needed. Consider working with a professional if your child has significant emotional regulation difficulties that affect family life, co-occurring conditions like anxiety, depression, or learning disabilities alongside ADHD, or if executive function challenges are severe enough that daily life feels constantly overwhelming for both your child and you.</p>
+
+<p>An occupational therapist can help with sensory needs and executive function strategies. A psychologist or psychiatrist can assess whether medication might be helpful. An educational therapist or tutor who specializes in ADHD can provide strategies specific to your child's profile.</p>
+
+<p>Medication is a personal family decision, and homeschooling doesn't make that decision for you in either direction. Some homeschooling families use medication and find it helpful. Others manage without it. The right choice depends on your child's specific needs and your family's values. Work with a qualified professional who understands ADHD to make this decision.</p>
+
+<h2>What About Socialization?</h2>
+
+<p>This question comes up for all homeschoolers, but it carries extra weight for ADHD kids. Social skills can be a genuine challenge for children with ADHD, and structured social opportunities matter.</p>
+
+<p>Homeschool co-ops, sports teams, scouting, 4-H, community theater, art classes, and other group activities all provide social interaction. The advantage of homeschooling is that you can choose social settings that work for your child. If your kid does well in small groups but falls apart in large ones, you can prioritize small-group activities. If they need more physical outlets, sports and outdoor groups provide both socialization and movement.</p>
+
+<p>Many parents find that removing the daily social pressure of traditional school actually improves their ADHD child's social skills over time. When a child isn't spending all day masking, managing frustration, or recovering from sensory overload, they have more emotional bandwidth for positive social interactions.</p>
+
+<h2>Common Mistakes to Avoid</h2>
+
+<h3>Trying to Replicate School at Home</h3>
+
+<p>If traditional school didn't work for your ADHD child, doing the same thing at your kitchen table won't fix the problem. The whole point of homeschooling is flexibility. Embrace that. Let your kid learn math while standing on one foot if that's what works.</p>
+
+<h3>Comparing to Neurotypical Timelines</h3>
+
+<p>Your ADHD child might take longer to develop executive function skills, writing stamina, or the ability to work independently. That's normal for ADHD. Progress matters more than grade-level benchmarks. A child who goes from writing one reluctant sentence to writing a full paragraph is making real progress, even if "grade level" says they should be writing five paragraphs.</p>
+
+<h3>Ignoring the Good Days</h3>
+
+<p>ADHD kids have wildly inconsistent performance. Some days they'll blow through math in 15 minutes and write a creative story that impresses you. Other days, getting through one worksheet feels like pulling teeth. This inconsistency is a hallmark of ADHD, not a character flaw. Track the good days. Celebrate them. They prove your child is capable, even when the hard days make you doubt it.</p>
+
+<h3>Forgetting to Take Care of Yourself</h3>
+
+<p>Homeschooling a child with ADHD is more demanding than homeschooling a neurotypical child. You're teaching, accommodating, scaffolding, and managing behaviors all at once. Build in breaks for yourself. Connect with other parents who homeschool ADHD kids (online communities can be a lifeline). Ask for help when you need it. Your own mental health directly affects your child's learning environment.</p>
+
+<h2>Getting Started: Your First Month</h2>
+
+<p>If you're just beginning, here's a simple plan for your first month:</p>
+
+<p><strong>Week 1:</strong> Observe your child. When are they most focused? Most restless? What topics light them up? What causes meltdowns? Don't try to do formal school yet. Just watch and take notes.</p>
+
+<p><strong>Week 2:</strong> Introduce one or two subjects with short lessons (15 minutes max). See how your child responds to different formats: video lessons, reading together, hands-on activities, workbooks. Notice what works and what doesn't.</p>
+
+<p><strong>Week 3:</strong> Add remaining core subjects, still keeping lessons short. Start building a basic daily routine with visual schedules and timers. Expect some resistance as your child adjusts.</p>
+
+<p><strong>Week 4:</strong> Evaluate what's working. Adjust timing, curriculum, and expectations based on what you've learned. Order or download additional materials based on what actually engaged your child, not what looked good on paper.</p>
+
+<p>Give yourself at least three months before judging whether homeschooling is working. The first month is always the hardest, and many kids need a "deschooling" period (roughly one month for every year they were in traditional school) to decompress and rediscover their natural curiosity.</p>
+
+<h2>The Bottom Line</h2>
+
+<p>Homeschooling a child with ADHD isn't easy, but it gives you something traditional school can't: the ability to build an educational environment around your child's actual brain instead of asking their brain to conform to an environment that wasn't designed for it. Short lessons, frequent movement, engaging curriculum, external scaffolding, and patience go a long way. Your child isn't broken. They just need a different approach. And you're in the best position to provide it.</p>
+    `,
+  },
+
+  {
     slug: "how-to-start-homeschooling-2026",
     title: "How to Start Homeschooling: A Complete Guide for 2026",
     description: "Comprehensive guide to starting homeschool in 2026. Learn legal requirements, choose your method, select curriculum, and build daily routines.",
