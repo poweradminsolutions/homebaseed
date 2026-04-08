@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { WebsiteJsonLd, OrganizationJsonLd } from "@/components/seo/JsonLd";
-import { Providers } from "./providers";
+
+const GA_MEASUREMENT_ID = "G-NHGQVGE228";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://thehomeschoolsource.com"),
@@ -76,6 +78,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full antialiased">
+      <head>
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');
+          `}
+        </Script>
+      </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <WebsiteJsonLd />
         <OrganizationJsonLd />
@@ -85,13 +101,11 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        <Providers>
-          <Header />
-          <main id="main-content" className="flex-1" role="main">
-            {children}
-          </main>
-          <Footer />
-        </Providers>
+        <Header />
+        <main id="main-content" className="flex-1" role="main">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
