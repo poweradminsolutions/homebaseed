@@ -5,13 +5,12 @@ const footerLinks = {
     { href: "/states", label: "State Laws" },
     { href: "/find", label: "Find Resources" },
     { href: "/curriculum", label: "Curriculum Directory" },
-    { href: "/events", label: "Events" },
   ],
   learn: [
     { href: "/get-started", label: "Getting Started" },
-    { href: "/college-prep", label: "College Prep" },
-    { href: "/special-needs", label: "Special Needs" },
     { href: "/community", label: "Community" },
+    { href: "/blog", label: "Blog" },
+    { href: "/forum", label: "Forum" },
   ],
   about: [
     { href: "/about", label: "About Us" },
