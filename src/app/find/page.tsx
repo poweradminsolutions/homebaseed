@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { Suspense, useState, useMemo } from 'react';
+import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { resources } from '@/data/resources';
 import type { Resource } from '@/data/resources';
@@ -77,9 +78,12 @@ const costToValue = (cost: string): number => {
   return costMap[cost] ?? 3;
 };
 
-export default function FindResourcesPage() {
+function FindResourcesPageContent() {
+  const searchParams = useSearchParams();
+  const stateParam = searchParams?.get('state') || '';
+
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedState, setSelectedState] = useState('');
+  const [selectedState, setSelectedState] = useState(stateParam);
   const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
   const [selectedAgeRanges, setSelectedAgeRanges] = useState<string[]>([]);
   const [selectedReligion, setSelectedReligion] = useState('');
@@ -529,5 +533,19 @@ export default function FindResourcesPage() {
         </div>
       </div>
     </main>
+  );
+}
+
+export default function FindResourcesPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-[#FAFAF8] flex items-center justify-center">
+          <div className="text-[#6B6B6B]">Loading...</div>
+        </div>
+      }
+    >
+      <FindResourcesPageContent />
+    </Suspense>
   );
 }
