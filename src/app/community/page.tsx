@@ -32,12 +32,16 @@ const typeColors: Record<CoOp["type"], string> = {
 
 function CommunityPageContent() {
   const searchParams = useSearchParams();
-  const states = getUniqueStates();
-
-  // Honor a ?state= query param if it points to a state we have, otherwise default to Florida.
   const stateParam = searchParams?.get("state");
-  const initialState =
-    stateParam && states.includes(stateParam) ? stateParam : "Florida";
+  const dataStates = getUniqueStates();
+
+  // Honor whatever state the user requested, even if we have no listings for it yet.
+  // The destination page should show an empty state, not silently switch to a different state.
+  const states =
+    stateParam && !dataStates.includes(stateParam)
+      ? [...dataStates, stateParam].sort()
+      : dataStates;
+  const initialState = stateParam || (dataStates[0] ?? "Florida");
 
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedState, setSelectedState] = useState(initialState);
