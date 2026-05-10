@@ -45,7 +45,6 @@ const experienceLevelOptions: { value: ExperienceLevel; label: string; descripti
 
 function ProgressBar({ currentStep, totalSteps }: { currentStep: number; totalSteps: number }) {
   const progress = (currentStep / totalSteps) * 100;
-
   return (
     <div className="mb-8">
       <div className="flex justify-between items-center mb-3">
@@ -73,7 +72,6 @@ function Step1StateSelection({ data, onUpdate }: { data: WizardData; onUpdate: (
           We'll provide information specific to your state's homeschooling regulations and resources.
         </p>
       </div>
-
       <div className="space-y-3">
         <label className="block text-sm font-medium text-foreground">Select Your State</label>
         <select
@@ -92,7 +90,6 @@ function Step1StateSelection({ data, onUpdate }: { data: WizardData; onUpdate: (
           ))}
         </select>
       </div>
-
       {data.state && (
         <div className="bg-primary-light border border-primary rounded-lg p-4">
           <p className="text-sm text-primary-dark">
@@ -113,7 +110,6 @@ function Step2Children({ data, onUpdate }: { data: WizardData; onUpdate: (data: 
           This helps us recommend resources and curriculum that fit your needs.
         </p>
       </div>
-
       <div className="space-y-3">
         <label className="block text-sm font-medium text-foreground">
           How many children will you homeschool?
@@ -128,12 +124,13 @@ function Step2Children({ data, onUpdate }: { data: WizardData; onUpdate: (data: 
           placeholder="Enter number of children"
         />
       </div>
-
       <div className="space-y-3">
         <label className="block text-sm font-medium text-foreground mb-3">Age Ranges (Select all that apply)</label>
         <div className="space-y-2">
           {ageRangeOptions.map((option) => (
-            <label key={option.value} className="flex items-center space-x-3 cursor-pointer p-3 border border-border rounded-lg hover:bg-primary-light transition-colors">
+            <label
+              key={option.value}
+              className="flex items-center space-x-3 cursor-pointer p-3 border border-border rounded-lg hover:bg-primary-light transition-colors">
               <input
                 type="checkbox"
                 checked={data.ageRanges.includes(option.value)}
@@ -160,7 +157,6 @@ function Step2Children({ data, onUpdate }: { data: WizardData; onUpdate: (data: 
 
 function Step3Priorities({ data, onUpdate }: { data: WizardData; onUpdate: (data: WizardData) => void }) {
   const remaining = 3 - data.priorities.length;
-
   return (
     <div className="space-y-6">
       <div>
@@ -169,7 +165,6 @@ function Step3Priorities({ data, onUpdate }: { data: WizardData; onUpdate: (data
           Select up to 3 priorities to help us find the best resources for your family.
         </p>
       </div>
-
       {remaining > 0 && (
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
           <p className="text-sm text-blue-900">
@@ -177,7 +172,6 @@ function Step3Priorities({ data, onUpdate }: { data: WizardData; onUpdate: (data
           </p>
         </div>
       )}
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         {priorityOptions.map((option) => (
           <button
@@ -203,7 +197,6 @@ function Step3Priorities({ data, onUpdate }: { data: WizardData; onUpdate: (data
           </button>
         ))}
       </div>
-
       {data.priorities.length > 0 && (
         <div className="bg-primary-light border border-primary rounded-lg p-4">
           <p className="text-sm text-primary-dark font-medium mb-2">Selected Priorities:</p>
@@ -211,7 +204,9 @@ function Step3Priorities({ data, onUpdate }: { data: WizardData; onUpdate: (data
             {data.priorities.map((priority) => {
               const label = priorityOptions.find((o) => o.value === priority)?.label;
               return (
-                <span key={priority} className="bg-primary text-white px-3 py-1 rounded-full text-sm">
+                <span
+                  key={priority}
+                  className="bg-primary text-white px-3 py-1 rounded-full text-sm">
                   {label}
                 </span>
               );
@@ -232,7 +227,6 @@ function Step4ExperienceLevel({ data, onUpdate }: { data: WizardData; onUpdate: 
           This helps us tailor recommendations and resources to your needs.
         </p>
       </div>
-
       <div className="space-y-3">
         {experienceLevelOptions.map((option) => (
           <button
@@ -274,7 +268,6 @@ function Step5Results({ data }: { data: WizardData }) {
   const selectedState = data.state;
   const regulationLevel = selectedState?.regulationLevel || 'moderate';
   const regulationLabel = regulationLabels[regulationLevel];
-
   const regulationDescriptions = {
     none: 'Your state has no mandatory homeschooling regulations. You have tremendous freedom in how you structure your homeschool.',
     low: 'Your state has minimal homeschooling regulations. You have considerable flexibility while maintaining some basic requirements.',
@@ -300,33 +293,19 @@ function Step5Results({ data }: { data: WizardData }) {
     linkText: 'Browse Curriculum',
   });
 
-  // Add community/co-ops
+  // Add community/co-ops with the selected state pre-applied so the destination
+  // page doesn't fall back to its hardcoded Florida default.
   nextStepsGuide.push({
     title: 'Find Local Co-ops & Communities',
     description: 'Connect with other homeschooling families in your area for support, resources, and enrichment activities.',
-    link: '/community',
+    link: selectedState?.name
+      ? `/community?state=${encodeURIComponent(selectedState.name)}`
+      : '/community',
     linkText: 'Find Co-ops',
   });
 
-  // Add special needs resources if selected
-  if (data.priorities.includes('special-needs')) {
-    nextStepsGuide.push({
-      title: 'Special Needs Resources',
-      description: 'Access specialized resources and guides for homeschooling children with special needs.',
-      link: '/special-needs',
-      linkText: 'View Resources',
-    });
-  }
-
-  // Add college prep if selected
-  if (data.priorities.includes('college')) {
-    nextStepsGuide.push({
-      title: 'College Prep Planning',
-      description: 'Learn about transcript requirements, dual enrollment, and preparing for college admission.',
-      link: '/college-prep',
-      linkText: 'College Prep Guide',
-    });
-  }
+  // Note: /special-needs and /college-prep destinations do not exist yet,
+  // so we don't recommend dead links. Re-add when those pages are built.
 
   return (
     <div className="space-y-8">
@@ -355,9 +334,11 @@ function Step5Results({ data }: { data: WizardData }) {
               <p className="text-sm text-muted mb-2">Regulation Level</p>
               <div className="inline-block">
                 <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
-                  regulationLevel === 'low' ? 'bg-green-50 text-green-700' :
-                  regulationLevel === 'moderate' ? 'bg-yellow-50 text-yellow-700' :
-                  'bg-red-50 text-red-700'
+                  regulationLevel === 'low'
+                    ? 'bg-green-50 text-green-700'
+                    : regulationLevel === 'moderate'
+                      ? 'bg-yellow-50 text-yellow-700'
+                      : 'bg-red-50 text-red-700'
                 }`}>
                   {regulationLabel}
                 </span>
@@ -407,7 +388,9 @@ function Step5Results({ data }: { data: WizardData }) {
             {data.priorities.map((priority) => {
               const label = priorityOptions.find((o) => o.value === priority)?.label;
               return (
-                <span key={priority} className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">
+                <span
+                  key={priority}
+                  className="bg-primary text-white px-4 py-2 rounded-full text-sm font-medium">
                   {label}
                 </span>
               );
@@ -421,7 +404,9 @@ function Step5Results({ data }: { data: WizardData }) {
         <h3 className="text-2xl font-semibold text-foreground mb-4">Recommended Next Steps</h3>
         <div className="space-y-4">
           {nextStepsGuide.map((step, index) => (
-            <div key={index} className="border border-border rounded-lg p-6 bg-background hover:shadow-md transition-shadow">
+            <div
+              key={index}
+              className="border border-border rounded-lg p-6 bg-background hover:shadow-md transition-shadow">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <h4 className="text-lg font-semibold text-foreground mb-2">{step.title}</h4>
@@ -456,23 +441,16 @@ export default function GetStartedWizard() {
     priorities: [],
     experienceLevel: null,
   });
-
   const totalSteps = 5;
 
   const canProceed = (): boolean => {
     switch (currentStep) {
-      case 1:
-        return data.state !== null;
-      case 2:
-        return data.childCount > 0 && data.ageRanges.length > 0;
-      case 3:
-        return data.priorities.length > 0;
-      case 4:
-        return data.experienceLevel !== null;
-      case 5:
-        return true;
-      default:
-        return false;
+      case 1: return data.state !== null;
+      case 2: return data.childCount > 0 && data.ageRanges.length > 0;
+      case 3: return data.priorities.length > 0;
+      case 4: return data.experienceLevel !== null;
+      case 5: return true;
+      default: return false;
     }
   };
 
@@ -537,7 +515,6 @@ export default function GetStartedWizard() {
             </svg>
             Back
           </button>
-
           {currentStep === totalSteps ? (
             <button
               onClick={handleRestart}
