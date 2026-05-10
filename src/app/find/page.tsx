@@ -82,6 +82,20 @@ function FindResourcesPageContent() {
   const searchParams = useSearchParams();
   const stateParam = searchParams?.get('state') || '';
 
+  // If the URL targets a state we don't have any resources for yet,
+  // surface it in the dropdown so the user can see what's selected.
+  const slugToName = (slug: string) =>
+    slug
+      .split('-')
+      .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(' ');
+  const displayStates =
+    stateParam && !STATES.some((s) => s.slug === stateParam)
+      ? [...STATES, { name: slugToName(stateParam), slug: stateParam }].sort(
+          (a, b) => a.name.localeCompare(b.name)
+        )
+      : STATES;
+
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedState, setSelectedState] = useState(stateParam);
   const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
@@ -267,7 +281,7 @@ function FindResourcesPageContent() {
                   className="w-full px-3 py-2 border border-[#E2E2E0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1B6B4A] text-[#1A1A1A]"
                 >
                   <option value="">All States</option>
-                  {STATES.map((state) => (
+                  {displayStates.map((state) => (
                     <option key={state.slug} value={state.slug}>
                       {state.name}
                     </option>
