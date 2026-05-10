@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { Suspense, useState, useMemo } from "react";
+import { useSearchParams } from "next/navigation";
 import {
   coops,
   getUniqueStates,
@@ -29,16 +30,22 @@ const typeColors: Record<CoOp["type"], string> = {
   tutoring: "bg-rose-50 text-rose-700",
 };
 
-export default function CommunityPage() {
+function CommunityPageContent() {
+  const searchParams = useSearchParams();
+  const states = getUniqueStates();
+
+  // Honor a ?state= query param if it points to a state we have, otherwise default to Florida.
+  const stateParam = searchParams?.get("state");
+  const initialState =
+    stateParam && states.includes(stateParam) ? stateParam : "Florida";
+
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedState, setSelectedState] = useState("Florida");
+  const [selectedState, setSelectedState] = useState(initialState);
   const [selectedCounty, setSelectedCounty] = useState("");
   const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
-  const states = getUniqueStates();
   const counties = getUniqueCounties(selectedState);
-
   const allTypes = Array.from(new Set(coops.map((c) => c.type))).sort();
 
   const filteredResults = useMemo(() => {
@@ -47,7 +54,6 @@ export default function CommunityPage() {
       if (selectedCounty && coop.county !== selectedCounty) return false;
       if (selectedTypes.length > 0 && !selectedTypes.includes(coop.type))
         return false;
-
       if (searchQuery.trim()) {
         const query = searchQuery.toLowerCase();
         return (
@@ -57,7 +63,6 @@ export default function CommunityPage() {
           (coop.description && coop.description.toLowerCase().includes(query))
         );
       }
-
       return true;
     });
   }, [searchQuery, selectedState, selectedCounty, selectedTypes]);
@@ -96,8 +101,8 @@ export default function CommunityPage() {
           </h1>
           <p className="text-lg text-muted max-w-2xl">
             Find local co-ops, support groups, enrichment programs, and
-            homeschooling communities near you. Connect with families who share
-            your approach and values.
+            homeschooling communities near you. Connect with families who
+            share your approach and values.
           </p>
           <div className="mt-6 flex flex-wrap gap-6 text-sm text-muted">
             <div className="flex items-center gap-2">
@@ -348,8 +353,8 @@ export default function CommunityPage() {
                   No Groups Found
                 </h3>
                 <p className="text-muted mb-6">
-                  We didn't find any groups matching your filters. Try adjusting
-                  your search or browse all counties.
+                  We don't have any listings in {selectedState} yet. Try
+                  adjusting your search or browse another state.
                 </p>
                 <button
                   onClick={clearFilters}
@@ -382,6 +387,20 @@ export default function CommunityPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function CommunityPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-background flex items-center justify-center">
+          <div className="text-muted">Loading...</div>
+        </div>
+      }
+    >
+      <CommunityPageContent />
+    </Suspense>
   );
 }
 
